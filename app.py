@@ -34,6 +34,7 @@ df_filtrado = df[
 st.title("Dashboard de Análise de Salários na Área de Dados")
 st.markdown("Explore os dados salariais na área de dados nos últimos anos. Utilize os filtros à esquerda para refinar sua análise.")
 
+st.markdown("---")
 st.subheader("Métricas gerais (Salário anual em USD)")
 
 if not df_filtrado.empty:
@@ -66,6 +67,7 @@ with col_graf1:
             title="Top 10 cargos por salário médio",
             labels={'usd': 'Média salarial anual (USD)', 'cargo': ''}
         )
+        grafico_cargos.update_traces(marker_color=px.colors.qualitative.Plotly[1])
         grafico_cargos.update_layout(title_x=0.1, yaxis={'categoryorder':'total ascending'})
         st.plotly_chart(grafico_cargos, use_container_width=True)
     else:
@@ -80,6 +82,7 @@ with col_graf2:
             title="Distribuição de salários anuais",
             labels={'usd': 'Faixa salarial (USD)', 'count': ''}
         )
+        grafico_hist.update_traces(marker_color=px.colors.qualitative.Plotly[1])
         grafico_hist.update_layout(title_x=0.1)
         st.plotly_chart(grafico_hist, use_container_width=True)
     else:
@@ -98,6 +101,7 @@ with col_graf3:
             title='Proporção dos tipos de trabalho',
             hole=0.5
         )
+        grafico_remoto.update_traces(marker=dict(colors=px.colors.qualitative.Plotly))
         grafico_remoto.update_traces(textinfo='percent+label')
         grafico_remoto.update_layout(title_x=0.1)
         st.plotly_chart(grafico_remoto, use_container_width=True)
@@ -118,5 +122,7 @@ with col_graf4:
         st.plotly_chart(grafico_paises, use_container_width=True)
     else:
         st.warning("Nenhum dado para exibir no gráfico de países.")
+
+st.markdown("---")
 st.subheader("Dados Detalhados")
 st.dataframe(df_filtrado)
