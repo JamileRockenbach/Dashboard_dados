@@ -17,32 +17,22 @@ Este projeto foi desenvolvido com o objetivo de:
 
 ### 🚀 Funcionalidades
 
- - Filtros interativos por:
-Ano
-Senioridade
-Tipo de contrato
-Tamanho da empresa
+Filtros interativos por: Ano, Senioridade, Tipo de contrato e Tamanho da empresa.
 
- - Métricas gerais:
-Salário médio anual (USD)
-Salário máximo
-Total de registros
-Cargo mais frequente
+Métricas gerais: Salário médio anual (USD), Salário máximo, Total de registros e Cargo mais frequente.
 
- - Visualizações gráficas:
-Top 10 cargos por salário médio
-Distribuição de salários
-Tabela detalhada com os dados filtrados
+Visualizações gráficas: Top 10 cargos por salário médio, Distribuição de salários e Tabela detalhada com os dados filtrados.
 
 ---
 
 ### 🛠️ Tecnologias Utilizadas
 
-Python
-Streamlit – criação da interface web interativa
-Pandas – manipulação e análise dos dados
-Plotly – geração de gráficos interativos
+ - Python
 
-Proporção dos tipos de trabalho (remoto/presencial/híbrido)
+ - Streamlit – criação da interface web interativa
 
-Mapa mundial com salário médio de Cientistas de Dados
+ - Pandas – manipulação e análise dos dados
+
+ - Plotly – geração de gráficos interativos
+
+---
